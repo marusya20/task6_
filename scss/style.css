@@ -1,6 +1,6 @@
 @font-face {
   font-family: OpenSans;
-  src: url(font/OpenSans/OpenSans-Bold.ttf);
+  src: url("/font/OpenSans/OpenSans-Bold.ttf");
 }
 body {
   margin: 0px;
@@ -13,25 +13,38 @@ body {
   width: 80%;
 }
 
+.nav {
+  margin-right: 10%;
+}
+
+.nav a {
+  font-family: OpenSans;
+  letter-spacing: 0.05em;
+  font-size: 19px;
+  color: #212121;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.nav :hover {
+  color: #00897b;
+}
+
 .header__top {
   display: flex;
+  position: fixed;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .header__top__logo {
   font-family: OpenSans;
   font-size: 25px;
-  color: #212121;
-}
-.header__top__menu a {
-  font-family: OpenSans;
-  font-size: 19px;
-  letter-spacing: 0.05em;
-  color: #212121;
-  text-decoration: none;
-  margin-right: 15px;
+  margin-left: 10%;
 }
 .header__content {
   width: 100%;
@@ -50,24 +63,24 @@ body {
 .header__content__title {
   position: absolute;
   font-family: OpenSans;
-  font-size: 60px;
   letter-spacing: 0.05em;
-  color: #ffffff;
-  margin-top: 127px;
+  font-size: 60px;
+  color: white;
+  margin-top: 170px;
 }
 .header__content__subtitle {
   position: absolute;
   font-family: OpenSans;
-  font-size: 22px;
   letter-spacing: 0.05em;
-  color: #ffffff;
-  margin-top: 232px;
+  font-size: 22px;
+  color: white;
+  margin-top: 273px;
 }
 .header__content__buttons {
   display: flex;
   position: absolute;
   width: 50%;
-  margin-top: 305px;
+  margin-top: 347px;
   justify-content: center;
 }
 .header__content__button {
@@ -83,6 +96,7 @@ body {
   height: 22px;
   padding: 20px 20px;
   text-align: center;
+  text-decoration: none;
 }
 .header__content__button:hover {
   background-color: #00897b;
@@ -101,16 +115,16 @@ body {
 }
 .main__name__title {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 30px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
 }
 .main__name__subtitle {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 15px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
   margin-top: 0px;
 }
@@ -145,17 +159,18 @@ body {
 }
 .about-us__content__title {
   font-family: OpenSans;
-  font-size: 20px;
   letter-spacing: 0.05em;
+  font-size: 20px;
   color: #212121;
 }
 .about-us__content__subtitle {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 15px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
   text-align: center;
+  margin: 0px;
 }
 
 .our-services {
@@ -186,25 +201,26 @@ body {
 }
 .our-services__content__title {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 20px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
+  margin: 25px 0 25px 0;
 }
 .our-services__content__subtitle {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 15px;
   line-height: 25px;
-  letter-spacing: 0.05em;
   color: #212121;
-  margin-bottom: 37px;
+  margin: 0 20px 25px;
   text-align: center;
 }
 .our-services__content__button {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 20px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
   text-decoration: none;
   border: 1px solid black;
@@ -246,9 +262,9 @@ body {
 }
 .latest-works__button {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 20px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
   text-decoration: none;
   border: 2px solid #00897b;
@@ -302,16 +318,16 @@ body {
 }
 .latest-works__content__title {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 20px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #ffffff;
 }
 .latest-works__content__subtitle {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 15px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #ffffff;
 }
 
@@ -324,17 +340,24 @@ body {
 }
 .pricing-plan__info {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .pricing-plan__content {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   align-items: center;
-  width: 246px;
+  width: 330px;
   height: 635px;
+  margin-right: 50px;
+}
+.pricing-plan__content:last-child {
+  margin-right: 0px;
 }
 .pricing-plan__content__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 170px;
   background-color: #3949ab;
@@ -343,33 +366,32 @@ body {
 }
 .pricing-plan__content__title {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 25px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #ffffff;
-  margin: 45px 0 23px 0;
 }
 .pricing-plan__content__subtitle {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 37px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #ffffff;
   margin: 0px;
 }
 .pricing-plan__content__little {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 17px;
   line-height: 22px;
   font-weight: 400;
-  letter-spacing: 0.05em;
   color: #ffffff;
 }
 .pricing-plan__content__text {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 17px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #635f5f;
   border-bottom: 1px solid #635f5f;
   padding-bottom: 30px;
@@ -378,8 +400,8 @@ body {
 }
 .pricing-plan__content__button {
   font-family: OpenSans;
-  font-size: 20px;
   letter-spacing: 0.05em;
+  font-size: 20px;
   color: #212121;
   text-decoration: none;
   border: 1px solid black;
@@ -389,24 +411,25 @@ body {
 .pricing-plan__content__button:hover {
   color: #ffffff;
   background-color: #00897b;
-  border: none;
+  border: 1px solid #00897b;
 }
 
 .team {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 990px;
+  height: 940px;
   background-color: #ffffff;
 }
 .team__members {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .team__member {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 7px;
 }
 .team__member__img {
   width: 310px;
@@ -414,32 +437,61 @@ body {
 }
 .team__member__name {
   font-family: OpenSans;
-  font-size: 20px;
   letter-spacing: 0.05em;
+  font-size: 20px;
   color: #212121;
 }
 .team__member__position {
   font-family: OpenSans;
-  font-size: 15px;
   letter-spacing: 0.05em;
+  font-size: 15px;
   color: #212121;
+  margin: 0 0 20px;
 }
 .team__member__social {
   display: flex;
   justify-content: space-around;
   width: 325px;
 }
-.team__member__button {
+.team__member__facebook {
   border: 2px solid transparent;
   border-radius: 30%;
-  padding: 10px;
+  padding: 9px 16px;
 }
-.team__member__button:first-child {
-  padding: 10px 17px;
-}
-.team__member__button:hover {
+.team__member__facebook:hover {
   border: 2px solid #00897b;
   border-radius: 30%;
+  padding: 9px 16px;
+}
+.team__member__twitter {
+  border: 2px solid transparent;
+  border-radius: 30%;
+  padding: 12px 11px;
+}
+.team__member__twitter:hover {
+  border: 2px solid #00897b;
+  border-radius: 30%;
+  padding: 12px 11px;
+}
+.team__member__comments {
+  border: 2px solid transparent;
+  border-radius: 30%;
+  padding: 11px 10px;
+}
+.team__member__comments:hover {
+  border: 2px solid #00897b;
+  border-radius: 30%;
+  padding: 11px 10px;
+}
+.team__member__dribble {
+  border: 2px solid transparent;
+  border-radius: 30%;
+  padding: 10px 11px;
+}
+.team__member__dribble:hover {
+  border: 2px solid #00897b;
+  border-radius: 30%;
+  padding: 10px 11px;
 }
 
 .blog {
@@ -472,8 +524,8 @@ body {
 }
 .blog__info__title {
   font-family: OpenSans;
-  font-size: 25px;
   letter-spacing: 0.05em;
+  font-size: 25px;
   color: #00897b;
   margin: 50px 0 25px 0;
 }
@@ -491,16 +543,16 @@ body {
 }
 .blog__info__content__text {
   font-family: OpenSans;
-  font-size: 17px;
   letter-spacing: 0.05em;
+  font-size: 17px;
   color: #212121;
   margin: 4px 10px;
 }
 .blog__info__information {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 15px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   color: #212121;
 }
 
@@ -509,7 +561,7 @@ body {
   flex-direction: column;
   background-color: #212121;
   width: 100%;
-  height: 1254px;
+  height: 1160px;
 }
 .footer__contacts {
   display: flex;
@@ -537,9 +589,9 @@ body {
 }
 .footer__contact__text {
   font-family: OpenSans;
+  letter-spacing: 0.05em;
   font-size: 20px;
   line-height: 28px;
-  letter-spacing: 0.05em;
   color: #ffffff;
   text-align: center;
 }
@@ -552,30 +604,35 @@ body {
 .footer__little-fields {
   display: flex;
   justify-content: center;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 }
 .footer__field {
-  width: 430px;
-  height: 84px;
+  width: 415px;
+  height: 73px;
   border-radius: 10px;
   font-family: OpenSans;
-  font-size: 20px;
   letter-spacing: 0.05em;
+  font-size: 18px;
   color: #212121;
   outline: none;
   padding-left: 20px;
+  margin-right: 20px;
+}
+.footer__field:last-child {
+  margin-right: 0px;
 }
 .footer__big-field {
   width: 882px;
-  height: 300px;
+  height: 220px;
   border-radius: 10px;
   font-family: OpenSans;
-  font-size: 20px;
   letter-spacing: 0.05em;
+  font-size: 18px;
   color: #212121;
   padding-left: 20px;
-  margin-bottom: 39px;
+  margin-bottom: 20px;
   padding-top: 30px;
+  resize: none;
 }
 .footer__button {
   display: flex;
@@ -608,25 +665,29 @@ body {
   color: #212121;
 }
 
-@media (min-width: 1020px) {
-  .latest-works__buttons--for-phones {
+@media (min-width: 1024px) {
+  .latest-works__buttons--disabled {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .container {
     margin-left: 3%;
     margin-right: 3%;
     width: 94%;
   }
 
-  .main__name {
-    margin: 50px 0 50px 0;
+  .nav {
+    margin-right: 3%;
   }
 
-  .header__top__menu a {
+  .nav a {
     letter-spacing: 0em;
     margin-right: 7px;
+  }
+
+  .header__top__logo {
+    margin-left: 8%;
   }
   .header__content__title {
     font-size: 49px;
@@ -635,45 +696,69 @@ body {
     font-size: 18px;
   }
 
+  .main__name {
+    margin: 50px 0 50px 0;
+  }
+  .main__name__title {
+    font-size: 25px;
+  }
+  .main__name__subtitle {
+    font-size: 14px;
+  }
+
   .about-us {
-    height: 550px;
+    height: 515px;
+  }
+  .about-us__content__title {
+    font-size: 19px;
   }
 
   .our-services {
-    height: 1248px;
+    height: 1230px;
+  }
+  .our-services__content__subtitle {
+    margin: 0 15px 25px;
+  }
+  .our-services__content__button {
+    font-size: 16px;
+    padding: 17px 20px;
   }
 
   .latest-works {
-    height: 962px;
+    height: 930px;
   }
-  .latest-works__buttons--for-phones {
+  .latest-works__buttons--disabled {
     display: none;
   }
   .latest-works__button {
     margin: 0 20px 76px 0;
-    font-size: 16px;
+    font-size: 15px;
   }
   .latest-works__content {
-    width: 230px;
-    height: 230px;
+    width: 215px;
+    height: 215px;
   }
   .latest-works__content__img, .latest-works__content__shadow, .latest-works__content__text {
-    width: 230px;
-    height: 230px;
+    width: 215px;
+    height: 215px;
   }
   .latest-works__content__title {
     font-size: 16px;
   }
 
   .pricing-plan {
-    height: 1000px;
+    height: 960px;
   }
   .pricing-plan__content {
     width: 225px;
+    margin-right: 10px;
   }
 
   .team {
     height: 685px;
+  }
+  .team__member {
+    margin-right: 0px;
   }
   .team__member__img {
     width: 225px;
@@ -682,12 +767,36 @@ body {
   .team__member__social {
     width: 215px;
   }
-  .team__member__button:first-child {
-    padding: 10px 10px;
+  .team__member__facebook {
+    padding: 7px 15px;
+  }
+  .team__member__facebook:hover {
+    padding: 7px 15px;
+  }
+  .team__member__twitter {
+    padding: 10px 9px;
+  }
+  .team__member__twitter:hover {
+    padding: 10px 9px;
+  }
+  .team__member__comments {
+    padding: 9px 8px;
+  }
+  .team__member__comments:hover {
+    padding: 9px 8px;
+  }
+  .team__member__dribble {
+    padding: 8px 9px;
+  }
+  .team__member__dribble:hover {
+    padding: 8px 9px;
   }
 
   .blog {
     height: 1460px;
+  }
+  .blog__info__content {
+    margin-right: 1px;
   }
   .blog__info__img {
     width: 375px;
@@ -701,6 +810,9 @@ body {
     height: 388px;
   }
 
+  .footer__contact {
+    margin-right: 0px;
+  }
   .footer__contact__text {
     font-size: 15px;
   }
@@ -711,16 +823,29 @@ body {
   .footer__field {
     width: 532px;
     margin-bottom: 30px;
+    margin-right: 0px;
   }
   .footer__big-field {
     width: 532px;
   }
+  .footer__button a {
+    font-size: 17px;
+    padding: 22px 79px;
+  }
 }
-@media (max-width: 767px) {
+.company__text {
+  font-size: 18px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
   .container {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 84%;
+  }
+
+  .nav {
+    display: none;
   }
 
   .header__top {
@@ -733,20 +858,18 @@ body {
     display: none;
   }
   .header__content {
-    height: 246px;
-    background-size: 440px;
+    height: 293px;
   }
   .header__content__title {
     font-size: 23px;
-    margin-top: 32px;
+    margin-top: 94px;
   }
   .header__content__subtitle {
     font-size: 10px;
-    margin-top: 82px;
+    margin-top: 138px;
   }
   .header__content__buttons {
-    width: 100%;
-    margin-top: 117px;
+    margin-top: 172px;
     flex-direction: column;
     align-items: center;
   }
@@ -755,12 +878,18 @@ body {
     margin-right: 0px;
     width: 90px;
     height: 18px;
-    padding: 13px 14px;
+    padding: 8px 8px;
     margin-bottom: 10px;
   }
 
   .main__name {
-    margin: 39px 0 39px 0;
+    margin: 10px 0 20px 0;
+  }
+  .main__name__title {
+    font-size: 23px;
+  }
+  .main__name__subtitle {
+    font-size: 14px;
   }
 
   .about-us {
@@ -773,12 +902,9 @@ body {
   .about-us__content {
     margin-right: 0px;
   }
-  .about-us__content__title .about-us__content__subtitle {
-    margin: 5px;
-  }
 
   .our-services {
-    height: 2437px;
+    height: 2750px;
   }
   .our-services__info {
     flex-direction: column;
@@ -786,43 +912,35 @@ body {
   }
   .our-services__content {
     margin: 0 0 29px 0;
-    width: 350px;
-    height: 334px;
-  }
-  .our-services__content__title {
-    margin: 9px;
-  }
-  .our-services__content__subtitle {
-    margin: 7px;
+    height: 392px;
   }
   .our-services__content__button {
-    font-size: 13px;
+    font-size: 14px;
     padding: 14px 20px;
   }
 
   .latest-works {
-    height: 665px;
+    height: 595px;
   }
   .latest-works__buttons {
     display: none;
-    flex-direction: column;
   }
-  .latest-works__buttons--for-phones {
+  .latest-works__buttons--disabled {
     display: flex;
     flex-direction: column;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
   }
-  .latest-works__button--for-phones {
+  .latest-works__button--disabled {
     display: flex;
     justify-content: center;
   }
   .latest-works__button {
     width: 113px;
     height: 16px;
-    padding: 10px;
+    padding: 9px;
     text-align: center;
     margin: 0 15px 15px 0;
-    font-size: 13px;
+    font-size: 12px;
   }
   .latest-works__button:last-child {
     margin: 0 0 15px 0;
@@ -830,7 +948,7 @@ body {
   .latest-works__content {
     width: 110px;
     height: 110px;
-    margin: 0 7px 7px 0;
+    margin: 0 10px 10px 0;
   }
   .latest-works__content__img, .latest-works__content__shadow, .latest-works__content__text {
     width: 110px;
@@ -845,7 +963,7 @@ body {
   }
 
   .pricing-plan {
-    height: 1589px;
+    height: 1540px;
   }
   .pricing-plan__info {
     flex-direction: column;
@@ -853,8 +971,9 @@ body {
   }
   .pricing-plan__content {
     width: 295px;
-    height: 410px;
+    height: 408px;
     margin-bottom: 35px;
+    margin-right: 0px;
   }
   .pricing-plan__content__top {
     height: 96px;
@@ -873,29 +992,30 @@ body {
   }
 
   .team {
-    height: 1699px;
+    height: 1655px;
   }
   .team__members {
     flex-direction: column;
     align-items: center;
   }
   .team__member {
+    margin-right: 0px;
     margin-bottom: 30px;
   }
-  .team__member__name {
-    margin-bottom: 5px;
-  }
   .team__member__social {
-    width: 308px;
+    width: 280px;
   }
 
   .blog {
-    height: 1975px;
+    height: 1925px;
   }
   .blog__info {
     flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
+  }
+  .blog__info__content {
+    margin-right: 2px;
   }
   .blog__info__img {
     display: none;
@@ -903,23 +1023,35 @@ body {
   .blog__info__img--mobile {
     display: block;
   }
+  .blog__info__subtitle {
+    justify-content: center;
+  }
   .blog__info__text {
     height: 290px;
+    text-align: center;
   }
 
   .footer {
-    height: 1697px;
+    height: 1290px;
   }
   .footer__contacts {
     align-items: center;
     flex-direction: column;
   }
   .footer__contact {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     margin-right: 0px;
   }
   .footer__contact:last-child {
-    margin: 0 0 50px 0;
+    margin: 0 0 5px 0;
+  }
+  .footer__contact__img {
+    width: 39px;
+    height: 57px;
+    margin-bottom: 20px;
+  }
+  .footer__contact__text {
+    font-size: 16px;
   }
   .footer__little-fields {
     flex-direction: column;
@@ -927,58 +1059,74 @@ body {
   }
   .footer__field {
     width: 300px;
-    margin-bottom: 30px;
+    height: 59px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    font-size: 15px;
   }
   .footer__big-field {
     width: 300px;
+    height: 165px;
+    font-size: 15px;
+    padding-top: 25px;
   }
   .footer__button a {
-    font-size: 17px;
-    padding: 22px 79px;
+    font-size: 15px;
+    padding: 17px 52px;
   }
-  .footer__company__text {
-    font-size: 17px;
+
+  .company__text {
+    font-size: 15px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 320px) {
+  .header__top__logo {
+    font-size: 17px;
+  }
   .header__content__title {
     font-size: 21px;
-    margin-top: 40px;
   }
 
   .main__name__title {
-    font-size: 25px;
-    margin: 10px;
+    font-size: 21px;
   }
   .main__name__subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .about-us {
-    height: 923px;
+    height: 870px;
   }
-  .about-us__content__subtitle {
-    font-size: 14px;
+  .about-us__content__title {
+    font-size: 19px;
   }
 
   .our-services {
-    height: 2380px;
+    height: 2730px;
   }
   .our-services__content {
-    margin: 0 0 14px 0;
-    width: 300px;
-    height: 339px;
+    width: 270px;
+  }
+  .our-services__content__title {
+    font-size: 19px;
+  }
+  .our-services__content__subtitle {
+    font-size: 14px;
+  }
+  .our-services__content__button {
+    font-size: 15px;
+    padding: 11px 20px;
   }
 
   .latest-works {
-    height: 598px;
+    height: 550px;
   }
-  .latest-works__buttons--for-phones {
+  .latest-works__buttons--disabled {
     margin-bottom: 25px;
   }
   .latest-works__button {
-    padding: 8px;
-    font-size: 11px;
+    padding: 8px 0px;
+    font-size: 12px;
   }
   .latest-works__content {
     width: 90px;
@@ -993,11 +1141,27 @@ body {
     line-height: 0px;
   }
 
-  .team__member__img {
-    width: 291px;
-    height: 269px;
+  .pricing-plan__content {
+    width: 265px;
+  }
+  .pricing-plan__content__button {
+    padding: 14px 12px;
   }
 
+  .team {
+    height: 1515px;
+  }
+  .team__member__name {
+    font-size: 19px;
+  }
+  .team__member__img {
+    width: 265px;
+    height: 250px;
+  }
+
+  .blog {
+    height: 1760px;
+  }
   .blog__info__img {
     display: none;
   }
@@ -1006,9 +1170,14 @@ body {
     width: 264px;
     height: 208px;
   }
+  .blog__info__title {
+    margin: 20px 0 20px 0;
+  }
+  .blog__info__subtitle {
+    margin-bottom: 7px;
+  }
   .blog__info__text {
     width: 270px;
-    height: 345px;
   }
   .blog__info__content {
     margin-right: 5px;
@@ -1021,11 +1190,31 @@ body {
     font-size: 15px;
   }
 
-  .footer__field, .footer__big-field {
+  .footer {
+    height: 1260px;
+  }
+  .footer__contact__img {
+    width: 34px;
+    height: 52px;
+  }
+  .footer__contact__text {
+    font-size: 14px;
+  }
+  .footer__field {
+    height: 54px;
     width: 262px;
+    font-size: 14px;
+  }
+  .footer__big-field {
+    width: 262px;
+    font-size: 14px;
+  }
+  .footer__button a {
+    font-size: 13px;
+    padding: 14px 42px;
   }
 
   .company__text {
-    font-size: 16px;
+    font-size: 12px;
   }
 }

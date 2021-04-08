@@ -7,6 +7,10 @@ body {
   width: 100%;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .container {
   margin-left: 10%;
   margin-right: 10%;
@@ -30,6 +34,10 @@ body {
   color: #00897b;
 }
 
+.nav-burger {
+  display: none;
+}
+
 .header__top {
   display: flex;
   position: fixed;
@@ -45,6 +53,7 @@ body {
   font-family: OpenSans;
   font-size: 25px;
   margin-left: 10%;
+  z-index: 5;
 }
 .header__content {
   width: 100%;
@@ -845,7 +854,64 @@ body {
   }
 
   .nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 231, 231, 0.9);
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+    margin-top: 60px;
+  }
+  .nav ::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background-color: #00897b;
+  }
+  .nav a {
+    font-size: 17px;
+    margin: 10px 0 20px 10%;
+  }
+  .nav._active {
+    left: 0;
+  }
+
+  .nav-burger {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    margin-right: 10%;
+    cursor: pointer;
+  }
+  .nav-burger span, .nav-burger::before, .nav-burger::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: black;
+  }
+  .nav-burger::before, .nav-burger::after {
+    content: "";
+  }
+  .nav-burger::before {
+    top: 0;
+  }
+  .nav-burger::after {
+    bottom: 0;
+  }
+  .nav-burger span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
   }
 
   .header__top {
